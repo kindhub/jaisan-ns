@@ -1,0 +1,640 @@
+@import "./../assets/vars";
+@import "./../assets/keyframes";
+@import "./../modules/nav.scss";
+
+// BREAKPOINT LAPTOP
+@media (max-width: $ss_laptop) {
+	.container{
+		max-width: 1100px;
+	}
+	.wrapper{
+		font-size: 16px;
+	}
+	.header{
+		&-call__btn {
+			font-weight: 500;
+			padding: 15.04px 15px 12.96px;
+		}
+	}
+	.about{
+		&__arrow-icon-wrapper{
+			display: none;
+		}
+	}
+	.layouts{
+		&__modal-content{
+			width: 60%;
+			margin: 15% auto 0;
+		}
+	}
+	.contacts{
+		&__social-title{
+			font-size: 27px;
+			line-height: 23px;
+			&::before {
+				top: 40px;
+			}
+		}
+		&__application {
+			margin: 74.73px 37px 70.37px 50px;
+		}
+		&__social-subtitle {
+			width: 80%;
+		}
+	}
+	.footer{
+		&__logo {
+			margin-right: 40px;
+		}
+		&__content-right{
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+		&__social-icons{
+			display: flex;
+			gap: 30px;
+		}
+	}
+}
+// BREAKPOINT TABLET
+@media (max-width: $ss_tablet) {
+	.wrapper{
+		font-size: 15px;
+	}
+	.container{
+		padding: 0 15px;
+	}
+	.title {
+		font-size: 30px;
+		line-height: 30px;
+		margin-top: 10px;
+		&:before {
+			top: 50px;
+		}
+		&--long {
+			&,
+			&-mb {
+				margin-bottom: 50px;
+			}
+		}
+		&--medium {
+			&,
+			&-mb {
+				margin-bottom: 50px;
+			}
+		}
+	}
+	.tmpl-hh__wrapper * {
+		box-sizing: border-box;
+	}
+	@include nav-module($color_primary, #fff);
+	.nav {
+		display: flex;
+		flex-direction: column;
+		z-index: 3;
+		&__item {
+			color: #fff !important;
+			& + & {
+				margin-left: 0;
+			}
+			&--site{
+				display: none;
+			}
+			&--mob{
+				display: block;
+			}
+			&-adress,
+			&-number{
+				display: block;
+				color: #fff;
+			}
+		}
+	}
+	.header{
+		&-adress,
+		&__call-content {
+			display: none;
+		}
+		&-call__btn {
+			margin-left: 0px;
+		}
+		&__logo{
+			margin-left: 10%;
+		}
+	}
+	.first-screen{
+		&__flat-img{
+			display: none;
+		}
+		&__phone-wrapper {
+			display: block;
+		}
+	}
+	.about {
+		&__content {
+			width: 57%;
+			line-height: 24px;
+		}
+	}
+	.layouts {
+		&__box {
+			margin: 0 20px 20px;
+		}
+
+		&__modal-content{
+			margin: 25% auto 0;
+			width: 70%;
+		}
+	}
+	.contacts{
+		&__social-title{
+			font-size: 27px;
+			line-height: 23px;
+			&::before {
+				top: 60px;
+			}
+		}
+		&__social {
+			padding-right: 18px;
+		}
+		&__application {
+			margin-left: 37px;
+		}
+		&__social-subtitle {
+			width: 100%;
+		}
+	}
+	.footer{
+		&__content-inner {
+			padding-bottom: 40px;
+		}
+		&__nav-one {
+			gap: 8px;
+		}
+		&__contacts-img {
+			display: none;
+		}
+		&__contacts-inner {
+			justify-content: space-between;
+		}
+		&__contacts-numb + &__contacts-numb {
+			margin-left: 15px;
+		}
+	}
+}
+// BREAKPOINT SM TABLET
+@media (max-width: $ss_sm_tablet) {
+	.wrapper{
+		font-size: 14px;
+	}
+	.about {
+		&__img-wrapper {
+			width: 100%;
+			text-align: center;
+			order: 2;
+		}
+	
+		&__content {
+			margin: 0 auto 20px;
+			width: 100%;
+			order: 1;
+		}
+	}
+	.card__title {
+		font-size: 25px;
+		line-height: 38px;
+		margin-bottom: 27px;
+		margin-top: 20px;
+		&::before {
+			top: 45px;
+		}
+		&--long {
+			&,
+			&-mb {
+				margin-top: 20px;
+			}
+		}
+		&--slider {
+			margin-bottom: 40px;
+			font-size: 20px;
+		}
+		&--infrastructure {
+			font-size: 20px;
+			margin-top: 27px;
+		}
+	}
+	.infrastructure {
+		&__card-icon-wrapper {
+			font-size: 3.5em;
+		}
+		&__card {
+			padding-bottom: 44px;
+		}
+		&__card::before {
+			right: -15px;
+		}
+	}
+	.card-slider-arrows {
+		margin: 45px 0 0 15px;
+		gap: 124px;
+	}
+	.slider__pagination {
+		left: 75px;
+		font-size: 27px;
+	}
+	.layouts {
+		&__card-img-wrapper {
+			padding: 20px 0;
+		}
+		&__card-title {
+			font-size: 20px;
+			line-height: 24px;
+			margin-bottom: 6px;
+		}
+		&__card-subtitle {
+			font-size: 15px;
+			margin-bottom: 10px;
+		}
+		&__card-descr-text {
+			font-size: 12px;
+			line-height: 15px;
+		}
+	}
+	.contacts {
+		&__inner {
+			padding: 20px;
+			margin: 0 20px;
+		}
+		&__social {
+			width: 100%;
+			margin: 0;
+		}
+		&__application {
+			width: 100%;
+			margin: 30px 0 0;
+		}
+	}
+	.footer {
+		&__contacts-inner {
+			padding: 20px 8px;
+		}
+		&__contacts-numb {
+			font-size: 13px;
+			line-height: 15px;
+		}
+		&__contacts-numb span {
+			margin-left: 6px;
+		}
+		&__contacts-mail {
+			font-size: 13px;
+			line-height: 15px;
+			margin-left: 10px;
+			padding-left: 0;
+			border: none;
+		}
+		&__nav {
+			gap: 20px;
+			width: 70%;
+		}
+		&-nav__item {
+			font-size: 14px;
+			line-height: 10px;
+		}
+		&__nav-one {
+			gap: 10px;
+		}
+		&__nav-two {
+			gap: 20px;
+		}
+		&-call__btn-wrapper {
+			margin-left: 0px;
+			font-weight: 500;
+			font-size: 12px;
+			padding: 10px 4px;
+			height: 37px;
+		}
+	}
+}
+// BREAKPOINT PHONE
+@media (max-width: $ss_phone) {
+	.wrapper{
+		width: calc(100% + 30px);
+		// margin: 0 -15px;
+	}
+	.modal-content{
+		width: 100%;
+	}
+	.section {
+		padding-top: 60px;
+	}
+	.title {
+		font-size: 23px;
+		line-height: 25px;
+		margin-top: 0px;
+		&:before {
+			top: 30px;
+		}
+		&--long {
+			&,
+			&-mb {
+				margin-bottom: 30px;
+			}
+		}
+		&--medium {
+			&,
+			&-mb {
+				margin-bottom: 30px;
+			}
+		}
+	}
+	.card__title {
+		font-size: 16px;
+		line-height: 24px;
+		margin-bottom: 27px;
+		margin-top: 20px;
+		&::before {
+			top: 35px;
+			width: 30px;
+			height: 3px;
+		}
+		&--long {
+			&,
+			&-mb {
+				margin-top: 20px;
+			}
+		}
+		&--slider {
+			margin-bottom: 40px;
+			font-size: 20px;
+		}
+		&--infrastructure {
+			font-size: 20px;
+			margin: 27px 0 0 20px;
+		}
+	}
+	.header{
+		&__logo{
+			text-align: right;
+		}
+		&__logo-img{
+			width: 50%;
+		}
+		&__modal-btn{
+			padding: 5px 10px;
+			font-size: 12px !important;
+		}
+		&__modal-content{
+			width: 85%;
+		}
+	}
+	.first-screen {
+		&__title {
+			padding-top: 170px;
+			font-weight: 500;
+			font-size: 35px;
+			line-height: 55px;
+		}
+		&__sub-title {
+			font-size: 25px;
+			line-height: 28px;
+			margin-top: 15px;
+			padding-bottom: 170px;
+		}
+		&__scroll {
+			display: none;
+		}
+		&__phone-icon-wrapper {
+			width: 50px;
+			height: 50px;
+		}
+		&__phone-icon-wrapper::before {
+			width: 20px;
+			height: 20px;
+			top: 30%;
+			left: 30%;
+		}
+	}
+	.about {
+		&__img-wrapper {
+			width: 100%;
+			margin: 0 auto;
+		}
+		&__content-text {
+			margin-top: 20px;
+		}
+	}
+	.advantages {
+		&__items {
+			width: 100%;
+			margin: 0 auto;
+		}
+		&__item:nth-child(1),
+		&__item:nth-child(2),
+		&__item:nth-child(3) {
+			margin-bottom: 30px;
+		}
+	}
+	.infrastructure {
+		&__cards {
+			width: 100%;
+			justify-content: space-evenly;
+		}
+		&__card {
+			width: 40%;
+			border: 1px solid #DADADA;
+			&::before {
+				display: none;
+			}
+		}
+		&__card:nth-child(3),
+		&__card:nth-child(4){
+			margin-top: 20px;
+		}
+
+		&__card-icon-wrapper {
+			margin-left: 20px;
+		}
+		&__slider {
+			width: 100%;
+			border-top: none;
+		}
+		&__text {
+			width: 87%;
+			margin: 0 auto;
+		}
+	}
+	.gallery{
+		&-slider-arrows {
+			position: relative;
+			margin: 20px auto 10px;
+			justify-content: center;
+		}
+		
+		&-slider__pagination {
+			right: 45%;
+			top: -10px;
+		}
+	}
+	.stocks {
+		&__img-wrapper {
+			width: 100%;
+			margin: 0 auto;
+		}
+		&__img-wrapper + &__img-wrapper{
+			margin-top: 20px;
+		}
+	}
+	.layouts {
+		&__tabs {
+			margin: 0 auto;
+			display: block;
+			width: 221px;
+		}
+		&__types-tabs{
+			margin-bottom: 20px;
+			justify-content: center;
+		}
+		&__floors-tabs{
+			justify-content: center;
+		}
+		&__inner {
+			display: block;
+		}
+		&__box{
+			display: block;
+		}
+		&__download-btn-wrapper {
+			margin: 20px auto 0;
+			width: 222px;
+			padding: 14.54px 19.47px 13.46px;
+			text-align: center;
+		}
+		&__card {
+			width: 100%;
+			margin: 0 auto;
+		}
+		&__card + &__card{
+			margin-top: 20px;
+		}
+		&__modal-content{
+			margin: 30% auto 0;
+			width: 85%;
+		}
+	}
+	.footer {
+		&__contacts-inner {
+			display: block;
+			text-align: center;
+		}
+		&__contacts-numb {
+			margin: 0 0 15px;
+		}
+		&__logo{
+			margin: 0;
+		}
+		&__text-wrapper{
+			display: none;
+		}
+		&__content-right{
+			margin-top: 20px;
+			display: block;
+		}
+		&__social-icons {
+			justify-content: center;
+		}
+		&-call__btn-wrapper{
+			margin-top: 20px;
+			padding: 10px 40px;
+		}
+		&__telegram-icon,
+		&__insta-icon {
+			font-size: 3em;
+		}
+	}	
+}
+// BREAKPOINT MM TABLET
+@media (max-width: $ss_m_tablet) {
+	.header{
+		&__modal-btn{
+			padding: 5px;
+			font-size: 11px !important;
+		}
+		&__application-btn {
+			padding: 7px 0;
+		}
+		&__modal-content{
+			padding: 60px 30px;
+		}
+	}
+	.first-screen__title {
+		padding-top: 150px;
+		font-size: 28px;
+	}
+	.first-screen__sub-title {
+		font-size: 20px;
+		margin-top: 0px;
+		padding-bottom: 130px;
+	}
+	.infrastructure{ 
+		&__card {
+			width: 100%;
+		}
+		&__card:nth-child(2){
+			margin-top: 20px;
+		}
+		&__card-arrow-wrapper {
+			right: 25px;
+		}
+		&__text {
+			width: 100%;
+		}
+	}	
+	.layouts{
+		&__modal-content{
+			margin: 30% auto 0;
+			width: 85%;
+		}
+	}
+	.contacts{ 
+		&__application-input {
+			width: 100%;
+			&--number,
+			&--space{
+				margin-top: 20px;
+			}
+		}
+		&__application-btn{
+			width: 100%;
+		}
+	}
+	.footer {
+		&__content-inner {
+			flex-direction: column;
+			justify-content: center;
+			text-align: center;
+		}
+		&__content-left{
+			display: block;
+			order: 2;
+			margin-top: 20px;
+		}
+		&__content-right{
+			order: 1;
+		}
+		&__social-icons {
+			justify-content: center;
+		}
+	}	
+}
+@media (max-width: $ss_title_tablet) {
+	.header{
+		&__modal-btn{
+			padding: 5px;
+			font-size: 9px !important;
+			margin-left: 20px;
+		}
+	}
+	.title {
+		font-size: 17px;
+	}
+}

@@ -1,0 +1,387 @@
+extends ./pug/layout
+
+block content
+	<!-- START FIRST-SCREEN -->
+	.first-screen#home
+		.header 
+			.container 
+				.header__inner
+					.header__menu-nav 
+						.header-adress 
+							.header-adress__icon-wrapper 
+								+icon("location", "adress__icon")
+							.header-adress__text 
+								p г.Астана, Есильский р-н, Коргалжынское шоссе, участок 86
+						.header__nav.nav
+							a.nav__item.anchor(href="#about") О комплексе
+							a.nav__item.anchor(href="#advantages") Преимущества
+							a.nav__item.anchor(href="#geolocation") Расположение
+							a.nav__item.anchor(href="#sales") Акции
+							p.nav__item.nav__item-adress г.Астана, Есильский р-н, <br> Коргалжынское шоссе, участок 86
+							a.nav__item.nav__item-number(href="tel:+77000000000") 8 (700) 000-00-00
+						+nav-btn
+					a.header__logo.anchor(href="#home")
+						img.header__logo-img(src="images/first-screen/header-logo.svg" alt="")
+					.header__call
+						.header__call-content 
+							a.header__call-content-numb(href="tel:+77000000000")
+								.header-call__icon-wrapper 
+									+icon("phone", "phone-icon")
+								.header__call-content-numb-text 8 (700) 000-00-00
+							.header__call-content-text 
+								p прием звонков: пн-вс: 9:00-21:00
+						button.header__modal-btn(data-modal-btn="h-modal") заказать звонок
+						.header__modal(data-modal-window="h-modal")
+							.header__modal-content 
+								.header__modal-inner 
+									.header__application-title ваши контактные данные
+									.header__modal-close &times;
+								.header__application
+									form.header__application-form(name="form" action="mail.php" method="post" id="form_message")
+										.header__application-details
+											input.header__application-input.header__application-input--name(name="name" type="text" placeholder="Ваше имя")  
+											input.header__application-input.header__application-input--number(name="tel" type="tel"  pattern="2[0-9]{3}-[0-9]{3}" placeholder="Ваш телефон") 
+											input.header__application-input.header__application-input--mail(name="login" type="email" placeholder="Ваш email (не обязательно)") 
+									a.header__application-btn(href="#") оставить заявку
+									
+		.first-screen__inner 
+			.first-screen__title ЖК Жайсан ns
+			.first-screen__sub-title Территория новой жизни
+			.first-screen__scroll 
+				.first-screen__scroll-text узнать больше о ЖК
+				.first-screen__scroll-icon-wrapper.anchor(href='#nextsection')
+					+icon("scroll", "scroll-icon")
+				.first-screen__flat-img-wrapper 
+					img.first-screen__flat-img(src="images/first-screen/flat-img.svg", alt="")
+			a.first-screen__phone-wrapper(href="tel:+77000000000")
+				//- a.first-screen__phone-number(href="tel:+77000000000") 8 (700) 000-00-00
+				.first-screen__phone-icon-wrapper
+	<!-- END FIRST-SCREEN -->
+	<!-- START ABOUT -->
+	.next-section#nextsection
+	.about.section#about
+		.container 
+			.about__inner 
+				.about__img-wrapper 
+					img.about__img(src="images/about/about-img.jpg", alt="")
+				.about__content 
+					.title.title--short-mb о комплексе
+					.about__content-text
+						p Он необходим для дальнейшего продвижения вашего сайта. Вам будет необходимо предоставить исходные данные, по которым наши копирайтеры составят правильный текст, который будет содержать в себе основную информацию. Он необходим для дальнейшего продвижения вашего сайта. Вам будет необходимо предоставить исходные данные, по которым наши копирайтеры составят правильный текст, который будет содержать в себе основную информацию. 
+						p Он необходим для дальнейшего продвижения вашего сайта. Вам будет необходимо предоставить исходные данные, по которым наши копирайтеры составят правильный текст, который будет содержать в себе основную информацию. Он необходим для дальнейшего продвижения вашего сайта. Вам будет необходимо предоставить исходные данные, по которым наши копирайтеры составят правильный текст, который будет содержать в себе основную информацию. 
+					.about__arrow-icon-wrapper.anchor(href="#nextsection2") 
+						+icon("down-arrow", "down-arrow-icon")
+	<!-- END ABOUT -->
+	<!-- START ADVANTAGES -->
+	.advantages.section#nextsection2
+		.container 
+			.title.title--medium-mb#advantages преимущества ЖК Жайсан ns
+			.advantages__inner 
+				.advantages__items 
+					.advantages__item 
+						.advantages__img-wrapper 
+							img.advantages__img(src="images/advantages/item-1.jpg", alt="")
+						.card__title.card__title--long-mb детская площадка
+						.advantages__text Он необходим для дальнейшего продвижения вашего сайта. Вам будет необходимо предоставить исходные данные, по которым наши копирайтеры составят правильный текст, который будет содержать в себе основную информацию. Он необходим для д
+					.advantages__item 
+						.advantages__img-wrapper 
+							img.advantages__img(src="images/advantages/item-2.jpg", alt="")
+						.card__title качественная отделка
+						.advantages__text Он необходим для дальнейшего продвижения вашего сайта. Вам будет необходимо предоставить исходные данные, по которым наши копирайтеры составят правильный текст, который будет содержать в себе основную информацию. Он необходим для д
+				.advantages__items 
+					.advantages__item 
+						.advantages__img-wrapper 
+							img.advantages__img(src="images/advantages/item-3.jpg", alt="")
+						.card__title закрытый паркинг
+						.advantages__text Он необходим для дальнейшего продвижения вашего сайта. Вам будет необходимо предоставить исходные данные, по которым наши копирайтеры составят правильный текст, который будет содержать в себе основную информацию. Он необходим для д
+					.advantages__item 
+						.advantages__img-wrapper 
+							img.advantages__img(src="images/advantages/item-4.jpg", alt="")
+						.card__title.card__title--long-mb отличный район
+						.advantages__text Он необходим для дальнейшего продвижения вашего сайта. Вам будет необходимо предоставить исходные данные, по которым наши копирайтеры составят правильный текст, который будет содержать в себе основную информацию. Он необходим для д
+	<!-- END ADVANTAGES -->
+	<!-- START INFRASTRUCTURE -->
+	.infrastructure.section
+		.container 
+			.title.title--long-mb инфраструктура
+			.infrastructure__inner 	
+				.infrastructure__cards 
+					.infrastructure__card
+						.infrastructure__card-icon-wrapper 
+							+icon("infrastructure-icon-1", "card-icon")
+						.card__title.card__title--infrastructure детский сад
+						.infrastructure__card-arrow-wrapper 
+							+icon("infra-arrow", "arrow-icon")
+					.infrastructure__card
+						.infrastructure__card-icon-wrapper 
+							+icon("infrastructure-icon-1", "card-icon")
+						.card__title.card__title--infrastructure супермаркет
+						.infrastructure__card-arrow-wrapper 
+							+icon("infra-arrow", "arrow-icon")
+					.infrastructure__card
+						.infrastructure__card-icon-wrapper 
+							+icon("infrastructure-icon-1", "card-icon")
+						.card__title.card__title--infrastructure школа №00
+						.infrastructure__card-arrow-wrapper 
+							+icon("infra-arrow", "arrow-icon")
+					.infrastructure__card
+						.infrastructure__card-icon-wrapper 
+							+icon("infrastructure-icon-1", "card-icon")
+						.card__title.card__title--infrastructure остановка
+						.infrastructure__card-arrow-wrapper 
+							+icon("infra-arrow", "arrow-icon")
+				.infrastructure__slider
+					.swiper-container.card-slider(data-arrow-prev=".tmpl-hh__card-slider-arrow-prev" data-arrow-next=".tmpl-hh__card-slider-arrow-next")
+						.swiper-wrapper
+							.swiper-slide.slider-card-slide
+								.card__title.card__title--slider доступность
+								.infrastructure__text Жилой комплекс находится в экологически чистом и безопасном мкр. Нуртас в 5 минутах от Алматинской трассы и улицы Жибек жолы. Здесь мало многоэтажных домов, поэтому из окон комплекса жильцам будут открыты виды на город и прилегающие окрестности.
+							.swiper-slide.slider-card-slide
+								.card__title.card__title--slider доступность
+								.infrastructure__text Жилой комплекс находится в экологически чистом и безопасном мкр. Нуртас в 5 минутах от Алматинской трассы и улицы Жибек жолы. Здесь мало многоэтажных домов, поэтому из окон комплекса жильцам будут открыты виды на город и прилегающие окрестности.
+							.swiper-slide.slider-card-slide
+								.card__title.card__title--slider доступность
+								.infrastructure__text Жилой комплекс находится в экологически чистом и безопасном мкр. Нуртас в 5 минутах от Алматинской трассы и улицы Жибек жолы. Здесь мало многоэтажных домов, поэтому из окон комплекса жильцам будут открыты виды на город и прилегающие окрестности.
+							.swiper-slide.slider-card-slide
+								.card__title.card__title--slider доступность
+								.infrastructure__text Жилой комплекс находится в экологически чистом и безопасном мкр. Нуртас в 5 минутах от Алматинской трассы и улицы Жибек жолы. Здесь мало многоэтажных домов, поэтому из окон комплекса жильцам будут открыты виды на город и прилегающие окрестности.
+							.swiper-slide.slider-card-slide
+								.card__title.card__title--slider доступность
+								.infrastructure__text Жилой комплекс находится в экологически чистом и безопасном мкр. Нуртас в 5 минутах от Алматинской трассы и улицы Жибек жолы. Здесь мало многоэтажных домов, поэтому из окон комплекса жильцам будут открыты виды на город и прилегающие окрестности.
+							.swiper-slide.slider-card-slide
+								.card__title.card__title--slider доступность
+								.infrastructure__text Жилой комплекс находится в экологически чистом и безопасном мкр. Нуртас в 5 минутах от Алматинской трассы и улицы Жибек жолы. Здесь мало многоэтажных домов, поэтому из окон комплекса жильцам будут открыты виды на город и прилегающие окрестности.
+						.slider-arrows.card-slider-arrows
+							.slider-arrow.slider-arrow--prev.slider-arrow-prev
+								+icon("left-arrow", "slider-arrow__icon")
+							.slider-arrow.slider-arrow--next.slider-arrow-next
+								+icon("right-arrow", "slider-arrow__icon")
+						.slider__pagination
+	<!-- END INFRASTRUCTURE -->
+	<!-- START LOCATION -->
+	.location.section 
+		.container 
+			.title.title--medium-mb#geolocation расположение
+			.location__img-wrapper  
+				img.location__img(src="images/location.jpg", alt="")
+	<!-- END LOCATION -->
+	<!-- START GALLERY -->
+	.gallery.section 
+		.container 
+			.gallery-slider 
+				.swiper-container.gallery-slider(data-arrow-prev=".tmpl-hh__gallery-slider-arrow-prev" data-arrow-next=".tmpl-hh__gallery-slider-arrow-next")
+					.title.title--medium-mb галерея ЖК Жайсан ns
+					.swiper-wrapper
+						.swiper-slide.slider-gallery-slide
+							.gallery__img-wrapper--one 
+								img.gallery__img(src="images/gallery/photo-1.jpg", alt="")
+							.gallery__img-wrapper--two 
+								img.gallery__img(src="images/gallery/photo-2.jpg", alt="")
+						.swiper-slide.slider-gallery-slide
+							.gallery__img-wrapper--one  
+								img.gallery__img(src="images/gallery/photo-1.jpg", alt="")
+							.gallery__img-wrapper--two 
+								img.gallery__img(src="images/gallery/photo-2.jpg", alt="")
+						.swiper-slide.slider-gallery-slide
+							.gallery__img-wrapper--one  
+								img.gallery__img(src="images/gallery/photo-1.jpg", alt="")
+							.gallery__img-wrapper--two 
+								img.gallery__img(src="images/gallery/photo-2.jpg", alt="")
+						.swiper-slide.slider-gallery-slide
+							.gallery__img-wrapper--one  
+								img.gallery__img(src="images/gallery/photo-1.jpg", alt="")
+							.gallery__img-wrapper--two 
+								img.gallery__img(src="images/gallery/photo-2.jpg", alt="")
+						.swiper-slide.slider-gallery-slide
+							.gallery__img-wrapper--one  
+								img.gallery__img(src="images/gallery/photo-1.jpg", alt="")
+							.gallery__img-wrapper--two 
+								img.gallery__img(src="images/gallery/photo-2.jpg", alt="")
+						.swiper-slide.slider-gallery-slide
+							.gallery__img-wrapper--one  
+								img.gallery__img(src="images/gallery/photo-1.jpg", alt="")
+							.gallery__img-wrapper--two 
+								img.gallery__img(src="images/gallery/photo-2.jpg", alt="")
+					.slider-arrows.gallery-slider-arrows
+						.slider-arrow.slider-arrow--prev.slider-arrow-prev
+							+icon("left-arrow", "slider-arrow__icon")
+						.slider-arrow.slider-arrow--next.slider-arrow-next
+							+icon("right-arrow", "slider-arrow__icon")
+						.gallery-slider__pagination
+	<!-- END GALLERY -->
+	<!-- START LAYOUTS -->
+	.layouts.section
+		.container
+			.layouts__inner 
+				.title.title--medium-mb планировки
+				.layouts__box
+					.layouts__tabs 
+						.layouts__types-tabs 
+							.layouts__type-tab.content-tab.content-tab--active(href='#residential') Жилые 
+							.layouts__type-tab.content-tab(href='#commercial') Коммерческие
+						.layouts__floors-tabs 
+							.layouts__floor-tab.content-tab.content-tab--active(href="third") 3 этаж
+							.layouts__floor-tab.content-tab(href="fourth") 4 этаж
+					.layouts__download-btn-wrapper 	
+						a.layouts__download-btn(href="#") скачать этажный лист
+			.content.content--active.content--opacity-1.content__residential.content__third
+				.layouts__cards 
+					.layouts__card 
+						.layouts__card-img-wrapper(data-img="img-modal1")
+							img.layouts__card-img(src="images/layouts/card-1.svg", alt="scheme")
+						.layouts__modal(data-img-modal="img-modal1")
+							.layouts__modal-content 
+								img.layouts__modal-img(src="images/layouts/card-1.svg", alt="")
+								.layouts__modal-close &times;
+						.layouts__card-title 1-комн, №165 
+						.layouts__card-subtitle от 000 000 000 ₸
+						.layouts__card-descr 
+							.layouts__card-descr-text Площадь <span>51.97 м²</span>
+							.layouts__card-descr-text Этаж <span>2 из 17</span>
+							.layouts__card-descr-text Блок <span>4 блок</span>
+							.layouts__card-descr-text Сдача <span>2023 / 3 квартал</span>
+					.layouts__card 
+						.layouts__card-img-wrapper(data-img="img-modal2")
+							img.layouts__card-img(src="images/layouts/card-2.svg", alt="scheme")
+						.layouts__modal(data-img-modal="img-modal2")
+							.layouts__modal-content 
+								img.layouts__modal-img(src="images/layouts/card-2.svg", alt="")
+								.layouts__modal-close &times;
+						.layouts__card-title 1-комн, №165 
+						.layouts__card-subtitle от 000 000 000 ₸
+						.layouts__card-descr 
+							.layouts__card-descr-text Площадь <span>51.97 м²</span>
+							.layouts__card-descr-text Этаж <span>2 из 17</span>
+							.layouts__card-descr-text Блок <span>4 блок</span>
+							.layouts__card-descr-text Сдача <span>2023 / 3 квартал</span>
+					.layouts__card 
+						.layouts__card-img-wrapper(data-img="img-modal3")
+							img.layouts__card-img(src="images/layouts/card-3.svg", alt="scheme")
+						.layouts__modal(data-img-modal="img-modal3")
+							.layouts__modal-content 
+								img.layouts__modal-img(src="images/layouts/card-3.svg", alt="")
+								.layouts__modal-close &times;
+						.layouts__card-title 1-комн, №165 
+						.layouts__card-subtitle от 000 000 000 ₸
+						.layouts__card-descr 
+							.layouts__card-descr-text Площадь <span>51.97 м²</span>
+							.layouts__card-descr-text Этаж <span>2 из 17</span>
+							.layouts__card-descr-text Блок <span>4 блок</span>
+							.layouts__card-descr-text Сдача <span>2023 / 3 квартал</span>
+	<!-- END LAYOUTS -->
+
+	<!-- START STOCKS -->
+	.stocks.section 
+		.container 	
+			.title.title--medium-mb#sales акции
+			.stocks__inner 
+				.stocks__img-wrapper 
+					img.stocks__img(src="images/stocks/img-1.jpg", alt="")
+				.stocks__img-wrapper 
+					img.stocks__img(src="images/stocks/img-2.jpg", alt="")
+				.stocks__img-wrapper 
+					img.stocks__img(src="images/stocks/img-3.jpg", alt="")
+	<!-- END STOCKS -->
+
+	<!-- START ABOUT -->
+	.about.section
+		.container 
+			.about__inner 
+				.about__img-wrapper 
+					img.about__img(src="images/about/about-img-2.jpg", alt="")
+				.about__content 
+					.title.title--short-mb о застройщике
+					.about__content-text
+						p Он необходим для дальнейшего продвижения вашего сайта. Вам будет необходимо предоставить исходные данные, по которым наши копирайтеры составят правильный текст, который будет содержать в себе основную информацию. Он необходим для дальнейшего продвижения вашего сайта. Вам будет необходимо предоставить исходные данные, по которым наши копирайтеры составят правильный текст, который будет содержать в себе основную информацию. 
+						p Он необходим для дальнейшего продвижения вашего сайта. Вам будет необходимо предоставить исходные данные, по которым наши копирайтеры составят правильный текст, который будет содержать в себе основную информацию. Он необходим для дальнейшего продвижения вашего сайта. Вам будет необходимо предоставить исходные данные, по которым наши копирайтеры составят правильный текст, который будет содержать в себе основную информацию. 
+					.about__arrow-icon-wrapper.anchor(href="#nextsection3") 
+						+icon("down-arrow", "down-arrow-icon")
+	<!-- END ABOUT -->
+
+	<!-- START CONTACTS -->
+	.contacts.section#call
+		.container 
+			.contacts__inner#nextsection3
+				.contacts__social 
+					img.contacts__social-circle(src="images/contacts/social-circle.svg", alt="")
+					.contacts__social-title Свяжитесь с нами
+					.contacts__social-subtitle Оставьте свои данные и мы свяжемся с вами в ближайшее рабочее время.
+					a.contacts__social-phone(href="tel:+77000000000")
+						.contacts__social-phone-img-wrapper 
+							+icon("red-phone", "contacts__red-phone-icon")
+						.contacts__social-phone-number 8 (700) 000‒00‒00
+					.contacts__social-location 
+						.contacts__social-location-icon-wrapper 
+							+icon("red-location", "contacts__red-location-icon")
+						.contacts____social-location-text 
+							p г.Астана, Есильский р-н, <br> Коргалжынское шоссе, участок 86
+					a.contacts__social-mail(href="mailto:example@mail.kz")  
+						.contacts__social-mail-icon-wrapper 
+							+icon("red-mail", "contacts__red-mail-icon")
+						.contacts__social-mail-text example@mail.kz
+					.contacts__social-text наши Соц. сети и мессенджеры:
+					.contacts__social-icons
+						a.contacts__social-icons-tg(href="#") 
+							+icon("telegram", "contacts__telegram-icon")
+						a.contacts__social-icons-whats(href="#") 
+							+icon("whats", "contacts__whats-icon")
+						a.contacts__social-icons-whats(href="#") 
+							+icon("insta", "contacts__insta-icon")
+				.contacts__application
+					form.contacts__application-form(name="form" action="mail.php" method="post" id="form_message")
+						.contacts__application-title ваши контактные данные
+						.contacts__application-details
+							input.contacts__application-input.contacts__application-input--name(name="name" type="text" placeholder="Ваше имя")  
+							input.contacts__application-input.contacts__application-input--number(name="tel" type="tel"  pattern="2[0-9]{3}-[0-9]{3}" placeholder="Ваш телефон") 
+							input.contacts__application-input.contacts__application-input--mail(name="login" type="email" placeholder="Ваш email (не обязательно)") 
+						.contacts__application-title какая недвижимость вам требуется?
+						.contacts__application-question
+							input.contacts__application-input.contacts__application-input--floor(name="number" type="number" placeholder="Этаж (не обязательно)")  
+							input.contacts__application-input.contacts__application-input--space(name="space" type="text" placeholder="Площадь (не обязательно)") 
+						input.contacts__application-check(type="checkbox" id="flattype1" name="flattype1" value="residential")
+						label.contacts__application-check-text(for="flattype1") Жилая
+						input.contacts__application-check(type="checkbox" id="flattype2" name="flattype2" value="comercial")
+						label.contacts__application-check-text(for="flattype2") Коммерческая
+						input.contacts__application-input.contacts__application-input--comment(name="comment" type="text" placeholder="Комментарий (не обязательно)") 
+					a.contacts__application-btn(href="#") оставить заявку
+	<!-- END CONTACTS -->
+
+	<!-- START FOOTER -->
+	footer.footer.section 
+		.footer__contacts
+			img.footer__contacts-img(src="images/footer-img.svg", alt="")
+			.container
+				.footer__contacts-inner
+					.footer__contacts-numb whatsapp: <span>8 (700) 000‒00‒00</span>
+					.footer__contacts-numb ОТДЕЛ ПРОДАЖ: <span>8 (700) 000‒00‒00</span>
+					.footer__contacts-mail exampleMAIL@mail.kz
+		.footer__content 
+			.container 
+				.footer__content-inner
+					.footer__content-left
+						a.footer__logo.anchor(href="#home")
+							img.footer__logo-img(src="images/footer-logo.svg" alt="")
+						.footer__text-wrapper 
+							.footer__nav-box 
+								.footer__nav-title НАВИГАЦИЯ:
+								.footer__nav
+									.footer__nav-one
+										a.footer-nav__item.anchor(href="#about") О комплексе
+										a.footer-nav__item.anchor(href="#geolocation") Расположение
+									.footer__nav-two
+										a.footer-nav__item.anchor(href="#advantages") Преимущества
+										a.footer-nav__item.anchor(href="#sales") Акции 
+							.footer__location 
+								.footer__location-title ЛОКАЦИЯ ЖК:
+								.footer__location-text г.Астана, Есильский р-н, <br> Коргалжынское шоссе, участок 86	
+					.footer__content-right
+						.footer__social-icons 
+							a.footer__social-icons-tg(href="#") 
+								+icon("telegram", "footer__telegram-icon")
+							a.footer__social-icons-insta(href="#") 
+								+icon("insta", "footer__insta-icon")
+						.footer-call__btn-wrapper 
+							a.footer-call__btn.anchor(href="#call") заказать звонок
+				.footer__mark 
+					p ABC DESIGN
+	<!-- END FOOTER -->
